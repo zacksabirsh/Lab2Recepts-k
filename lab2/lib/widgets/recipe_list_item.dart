@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lab2/model/recipe_database/recipe.dart';
-import 'package:lab2/model/recipe_database/recipe_handler.dart';
 
 class RecipeListItem extends StatelessWidget {
   const RecipeListItem(this.recipe, {required this.onTap, super.key});

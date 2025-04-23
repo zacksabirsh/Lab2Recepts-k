@@ -3,10 +3,7 @@ import 'package:lab2/widgets/difficulty_control.dart';
 import 'package:lab2/widgets/ingredient_control.dart';
 import 'package:lab2/widgets/kitchen_control.dart';
 import 'package:lab2/widgets/price_control.dart';
-import 'package:lab2/widgets/recipe_list.dart';
 import 'package:lab2/widgets/time_control.dart';
-import 'package:lab2/widgets/recipe_list.dart';
-import 'package:lab2/widgets/recipe_detail.dart';
 import 'package:lab2/widgets/recipe_area.dart';
 
 

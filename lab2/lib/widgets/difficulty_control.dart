@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab2/app_theme.dart';
 import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:lab2/util/difficulty.dart';
 import 'package:provider/provider.dart';
@@ -17,13 +18,17 @@ class _DifficulyControlState extends State<DifficulyControl> {
   @override
   Widget build(BuildContext context) {
     var recipeHandler = Provider.of<RecipeHandler>(context, listen: false);
-
+    const labels = Difficulty.labels;
+    final icons = Difficulty.icons;
     return Column(
       children: [
-        for (final label in Difficulty.labels)
+        for (var label in labels)
+          
           RadioListTile<String>(
             dense: true,
-            title: Text(label),
+            title: 
+              Row(spacing: AppTheme.paddingMedium, 
+                  children: [if (label != Difficulty.showAll) Container(child: Difficulty.icon(label)), Text(label)]),
             value: label,
             groupValue: _difficulty,
             onChanged: (value) {

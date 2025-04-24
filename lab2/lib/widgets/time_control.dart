@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lab2/app_theme.dart';
+import 'package:lab2/constants/assets.dart';
 import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:provider/provider.dart';
 
@@ -26,18 +28,18 @@ Widget build(BuildContext context) {
         divisions: 10,
         max: 150,
         onChanged: (double value) {
-
-
           setState(() {
             _time = value;
           });
-
           recipeHandler.setMaxTime(_time.round());
-
         },
       ),
-
-      Text('${_time.round()} min'),
+      Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [Image.asset(Assets.timeIcon, height: 16), Padding(
+            padding: EdgeInsets.only(right: AppTheme.paddingSmall, left: AppTheme.paddingSmall), 
+            child: Text('${_time.round()} kr'))],
+),
      ],
  );
 }

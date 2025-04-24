@@ -7,6 +7,7 @@ import 'package:lab2/model/recipe_database/recipe.dart';
 import 'package:lab2/model/recipe_database/search_filter.dart';
 import 'package:lab2/util/functions.dart';
 
+
 class RecipeHandler extends ChangeNotifier {
   final List<Recipe> _recipes = [];
   final List<Recipe> _matchedRecipes = [];

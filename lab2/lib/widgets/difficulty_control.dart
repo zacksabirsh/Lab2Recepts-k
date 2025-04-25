@@ -19,7 +19,6 @@ class _DifficulyControlState extends State<DifficulyControl> {
   Widget build(BuildContext context) {
     var recipeHandler = Provider.of<RecipeHandler>(context, listen: false);
     const labels = Difficulty.labels;
-    final icons = Difficulty.icons;
     return Column(
       children: [
         for (var label in labels)

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lab2/app_theme.dart';
 import 'package:lab2/model/recipe_database/recipe.dart';
-import 'package:lab2/util/cuisine.dart';
 import 'package:lab2/util/difficulty.dart';
 import 'package:lab2/util/main_ingredient.dart';
+import 'package:lab2/widgets/recipe_image.dart';
 
 class RecipeListItem extends StatelessWidget {
   const RecipeListItem(this.recipe, {required this.onTap, super.key});
@@ -24,7 +24,7 @@ class RecipeListItem extends StatelessWidget {
           height: 128,
           child: Row(
             children: [
-            Padding(padding: EdgeInsets.only(left: AppTheme.paddingSmall),child: _image(recipe)),
+            Padding(padding: EdgeInsets.only(left: AppTheme.paddingSmall),child: RecipeImage(recipe, 104, 104, 24)),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.only(top: AppTheme.paddingSmall, left: AppTheme.paddingSmall),
@@ -68,19 +68,5 @@ class RecipeListItem extends StatelessWidget {
       ),
     );
   }
-Widget _image(recipe) {
-  var square = ClipRect(
-    child: Container(
-      width: 104, // Square width
-      height: 104, // Square height
-      child: FittedBox(fit: BoxFit.cover, child: recipe.image),
-    ),
-  );
-  var flagImage = Cuisine.flag(recipe.cuisine, width: 24.0);
-
-  return Stack(
-    children: [square, Positioned(bottom: 8, right: 8, child: flagImage!)],
-  );
- }
 }
 

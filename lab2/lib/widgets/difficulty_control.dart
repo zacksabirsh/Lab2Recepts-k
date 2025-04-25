@@ -28,7 +28,8 @@ class _DifficulyControlState extends State<DifficulyControl> {
             dense: true,
             title: 
               Row(spacing: AppTheme.paddingMedium, 
-                  children: [if (label != Difficulty.showAll) Container(child: Difficulty.icon(label)), Text(label)]),
+                  children: [if (label != Difficulty.showAll) 
+                  Container(width: 48,child: Difficulty.icon(label)), Text(label)]),
             value: label,
             groupValue: _difficulty,
             onChanged: (value) {

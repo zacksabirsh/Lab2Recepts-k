@@ -37,8 +37,8 @@ Widget build(BuildContext context) {
       Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [Image.asset(Assets.timeIcon, height: 16), Padding(
-            padding: EdgeInsets.only(right: AppTheme.paddingSmall, left: AppTheme.paddingSmall), 
-            child: Text('${_time.round()} kr'))],
+            padding: EdgeInsets.only(right: AppTheme.paddingLarge, left: AppTheme.paddingSmall), 
+            child: Text('${_time.round()} minuter'))],
 ),
      ],
  );

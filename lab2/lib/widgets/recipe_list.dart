@@ -20,10 +20,8 @@ class RecipeList extends StatelessWidget {
       for (final recipe in recipes) 
         RecipeListItem(recipe, onTap: (){
           uiController.selectRecipe(recipe);
-        })
-       
-       
-      
+        }
+      )   
    ]);
   }
 }
